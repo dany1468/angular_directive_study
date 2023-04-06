@@ -1,2 +1,10 @@
-<p appChangeColor="blue">appChangeColor="blue</p>
+<p appChangeColor="blue" [backgroundColor]="'yellow'" [fontWeight]="'bold'" [sample-id]="'123'">appChangeColor="blue"</p>
 <p [appChangeColor]="'red'">[appChangeColor]="'red'"</p>
+<hr>
+<p appChangeColor2="green" [backgroundColor]="'yellow'" [weight]="'bold'">appChangeColor2="green"</p>
+<hr>
+<p [style.color]='colorOfOutputSample' [style.font-weight]='fontWeightOfOutputSample'>Outputs Sample</p>
+<app-change-color (colorChange)="onColorChange($event)" (onChangeFont)="onChangeFont($event)"></app-change-color>
+<hr>
+<p [style.color]='colorOfOutputSample2' [style.font-weight]='fontWeightOfOutputSample2'>Outputs Sample 2</p>
+<app-change-color2 (colorChange)='onColorChange2($event)' (fontChange)='onChangeFont2($event)'></app-change-color2>
