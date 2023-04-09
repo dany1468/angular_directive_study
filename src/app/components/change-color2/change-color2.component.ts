@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
 })
 export class ChangeColor2Component {
   @Output() colorChange: EventEmitter<string> = new EventEmitter();
-  @Output() fontChange: EventEmitter<string> = new EventEmitter();
+  @Output('onChangeFont') fontChange: EventEmitter<string> = new EventEmitter();
 }

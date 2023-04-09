@@ -12,10 +12,6 @@ export class ChangeColor2Directive implements OnInit {
     this.el.nativeElement.style.fontWeight = this.weight;
   }
 
-  @Input() set appChangeColor(color: string) {
-    this.el.nativeElement.style.color = color;
-  }
-
   @Input() backgroundColor: string = 'white';
-  @Input() weight: string = 'normal';
+  @Input('fontWeight') weight: string = 'normal';
 }
